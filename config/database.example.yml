@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  username: postgresql
+  pool: 5
+
+development:
+  <<: *common
+  database: rails_skeleton_development
+
+test:
+  <<: *common
+  database: rails_skeleton_test
+
+production:
+  <<: *common
+  database: rails_skeleton_production
